@@ -1,7 +1,6 @@
-descontos = calcular_descontos(salario, vale_transporte, vale_refeicao, dependentes)
-    salario_liquido = calcular_salario_liquidoimport os
+import os
 form  sqlachemy import crate_engine, column,string, Integer
-form sqlachemy.orm import 
+form sqlachemy.orm import
 
 
 def calcular_inss(salario):
