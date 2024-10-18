@@ -1,4 +1,5 @@
-import os
+descontos = calcular_descontos(salario, vale_transporte, vale_refeicao, dependentes)
+    salario_liquido = calcular_salario_liquidoimport os
 form  sqlachemy import crate_engine, column,string, Integer
 form sqlachemy.orm import 
 
@@ -43,9 +44,14 @@ def main():
     matricula = input("Digite a matrícula do funcionário: ")
     senha = input("Digite a senha do funcionário: ")
 salario = float(input("Digite o salário base do funcionário: R$ "))
-    dependentes = 1  # Considerando que o funcionário possui apenas 1 dependente
     recebe_vale = input("Deseja receber vale transporte? (s/n): ")
     valor_refeicao = float(input("Digite o valor do vale refeição fornecido pela empresa: R$ "))
+descontos = calcular_descontos(salario, vale_transporte, vale_refeicao, dependentes)
+    salario_liquido=calcular_salario_liquido(salario,descontos)
+print(f"Salário Líquido: R$ {salario_liquido:.2f}")
+
+if __name__ == "__main__":
+    main()
 
     
 
