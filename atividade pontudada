@@ -2,6 +2,40 @@ import os
 form  sqlachemy import crate_engine, column,string, Integer
 form sqlachemy.orm import 
 
+
+def calcular_inss(salario):
+    if salario <= 1100.00:
+        return salario * 0.075
+    elif salario <= 2203.48:
+        return salario * 0.09
+    elif salario <= 3305.22:
+        return salario * 0.12
+    elif salario <= 6433.57:
+        return salario * 0.14
+    return 854.36
+def calcular_irrf(salario, dependentes):
+    if salario <= 2259.20:
+        return 0
+    elif salario <= 2826.65:
+        return salario * 0.075 - (189.59 * dependentes)
+    elif salario <= 3751.05:
+        return salario * 0.15 - (189.59 * dependentes)
+    elif salario <= 4664.68:
+        return salario * 0.225 - (189.59 * dependentes)
+    return salario * 0.275 - (189.59 * dependentes)
+
+
+def calcular_descontos(salario, vale_transporte, vale_refeicao, dependentes):
+    inss = calcular_inss(salario)
+    irrf = calcular_irrf(salario, dependentes)
+    desconto_vt = salario * 0.06 if vale_transporte == 's' else 0
+    desconto_vr = vale_refeicao * 0.20
+
+    total_descontos = inss + irrf + desconto_vt + desconto_vr
+    return total_descontos
+
+
+
 def main():
     matricula = input("Digite a matrícula do funcionário: ")
     senha = input("Digite a senha do funcionário: ")
