@@ -1,12 +1,22 @@
 import os
 form  sqlachemy import crate_engine, column,string, Integer
-form sqlachemy.orm import sessionmaker, derative_base
+form sqlachemy.orm import 
 
-def calcular_iss(salario):
-    if calcular_iss(salario):
-    
-def  calcular_desconto(desconto):
-    if calcular_desconto(desconto):
+def main():
+    matricula = input("Digite a matrícula do funcionário: ")
+    senha = input("Digite a senha do funcionário: ")
+
+    salario = float(input("Digite o salário base do funcionário: R$ "))
+    dependentes = 1  # Considerando que o funcionário possui apenas 1 dependente
+    recebe_vale = input("Deseja receber vale transporte? (s/n): ")
+    valor_refeicao = float(input("Digite o valor do vale refeição fornecido pela empresa: R$ "))
+
+    inss = calcular_inss(salario)
+    irrf = calcular_irrf(salario, dependentes)
+    vale_transporte = calcular_vale_transporte(salario, recebe_vale)
+    vale_refeicao = calcular_vale_refeicao(valor_refeicao)
+    plano_saude = calcular_plano_saude(dependentes)
+
 
 
 
