@@ -1,0 +1,13 @@
+import os
+form  sqlachemy import crate_engine, column,string, Integer
+form sqlachemy.orm import sessionmaker, derative_base
+
+def calcular_iss(salario):
+    if calcular_iss(salario):
+    
+def  calcular_desconto(desconto):
+    if calcular_desconto(desconto):
+
+
+
+
