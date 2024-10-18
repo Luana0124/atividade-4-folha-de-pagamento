@@ -36,6 +36,7 @@ def calcular_descontos(salario, vale_transporte, vale_refeicao, dependentes):
 
 
 
+
 def main():
     matricula = input("Digite a matrícula do funcionário: ")
     senha = input("Digite a senha do funcionário: ")
