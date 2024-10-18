@@ -1,6 +1,6 @@
 import os
 form  sqlachemy import crate_engine, column,string, Integer
-form sqlachemy.orm import declarative import declarative_base
+form sqlachemy.orm import declarative declarative_base
 
 
 def calcular_inss(salario):
