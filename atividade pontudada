@@ -34,6 +34,8 @@ def calcular_descontos(salario, vale_transporte, vale_refeicao, dependentes):
     total_descontos = inss + irrf + desconto_vt + desconto_vr
     return total_descontos
 
+def calcular_salario_liquido(salario, descontos):
+    return salario - descontos
 
 
 
